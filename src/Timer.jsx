@@ -87,7 +87,7 @@ const CountdownTimer = () => {
         <>
           <img
             className="2xl:w-[16%] xl:w-[18%] lg:w-[30%] md:w-[32%] w-[10%] responsive-img"
-            src="./public/happy-birthday.png"
+            src="../public/happy-birthday.png"
             alt="cake"
           />
           <label className="mx-10 text-2xl my-10 inputs-responsive">

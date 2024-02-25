@@ -11,7 +11,7 @@
 
 This is a simple React application - created using React Vite, Tailwind, Css
 
-Preview - <a href="https://simonakom.github.io/birthday-countdown/build/index.html" style="font-size:small;">here</a>
+Preview - <a href="https://simonakom.github.io/birthday-countdown/dist/index.html" style="font-size:small;">here</a>
  
 
 ## Getting Started
