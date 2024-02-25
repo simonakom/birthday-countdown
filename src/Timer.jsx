@@ -5,7 +5,18 @@ import { useWindowSize } from 'react-use';
 function Video() {
   return (
     <div className="video">
-      <iframe
+
+    <iframe 
+      width="960" 
+      height="750" 
+      src="https://www.youtube.com/embed/Jguqnlymeuk?si=W98ONFXeXBGXVLqp&autoplay=1" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+
+      {/* <iframe
         width="960"
         height="750"
         src="https://www.youtube.com/embed/Hqa4q2WG6Dk?si=OAUm4sezoIMEZ1DS&autoplay=1"
@@ -13,7 +24,7 @@ function Video() {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }
@@ -85,9 +96,14 @@ const CountdownTimer = () => {
     </>
       ) : (
         <>
-          <img
+          {/* <img
             className="2xl:w-[16%] xl:w-[18%] lg:w-[30%] md:w-[32%] w-[10%] responsive-img"
             src="../public/happy-birthday.png"
+            alt="cake"
+          /> */}
+            <img
+            className="2xl:w-[40%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
+            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjc0b3dzNWJnMDl2c211Ymh1ejBwN2xqMXg2bnRpejA4ZnZpbmo1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Im6d35ebkCIiGzonjI/giphy.gif"
             alt="cake"
           />
           <label className="mx-10 text-2xl my-10 inputs-responsive">
