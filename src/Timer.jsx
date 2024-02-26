@@ -44,6 +44,7 @@ const CountdownTimer = () => {
     if (targetDate) {
       calculateTimeRemaining();
       intervalRef.current = setInterval(calculateTimeRemaining, 1000);
+      setShowError(false); // Hide error message if target date is selected
       return () => clearInterval(intervalRef.current);
     }
   }, [targetDate]);
@@ -58,7 +59,6 @@ const CountdownTimer = () => {
       setShowError(true); // Show error message if no target date is selected
       return;
     }
-    setShowError(false); // Hide error message if target date is selected
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(calculateTimeRemaining, 1000);
   };
