@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Confetti from 'react-confetti'; 
 import { useWindowSize } from 'react-use'; 
+import ReactCurvedText from 'react-curved-text';
 
 function Video() {
   return (
     <div className="video">
-
     <iframe 
       width="960" 
       height="750" 
@@ -15,16 +15,6 @@ function Video() {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
       allowfullscreen>
     </iframe>
-
-      {/* <iframe
-        width="960"
-        height="750"
-        src="https://www.youtube.com/embed/Hqa4q2WG6Dk?si=OAUm4sezoIMEZ1DS&autoplay=1"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe> */}
     </div>
   );
 }
@@ -78,17 +68,19 @@ const CountdownTimer = () => {
     setTargetDate(event.target.value);
   };
 
-  const startTimer = () => { // Initiates the countdown timer when the user clicks the "Start Timer" button. If no target date is selected, it sets showError to true to display an error message.
+  const startTimer = () => {
+    // Initiates the countdown timer when the user clicks the "Start Timer" button.
     if (!targetDate) {
-      setShowError(true);
+      setShowError(true); // Show error message if no target date is selected
       return;
     }
+    setShowError(false); // Hide error message if target date is selected
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(calculateTimeRemaining, 1000);
   };
 
   return (
-    <div className="p-5 mt-20 mb-28 h-full flex flex-col items-center justify-center text-2xl text-[#ebdddd] overflow-hidden">
+    <div className="p-5 mb-28 h-full flex flex-col items-center justify-center text-xl text-[#ebdddd] overflow-hidden">
       {showVideo ? (
       <>
       <Video />
@@ -96,18 +88,33 @@ const CountdownTimer = () => {
     </>
       ) : (
         <>
-          {/* <img
-            className="2xl:w-[16%] xl:w-[18%] lg:w-[30%] md:w-[32%] w-[10%] responsive-img"
-            src="../public/happy-birthday.png"
-            alt="cake"
-          /> */}
+      <ReactCurvedText
+    width={970}
+    height={180}
+    cx={width > 768 ? 490 : (width > 520 ? 510 : 475)}
+    cy={width > 768 ? 20 : (width > 520 ? 30 : 50)}
+    rx={width > 768 ? 310 : (width > 520 ? 280 : 200)}
+    ry={width > 768 ? 120 : (width > 520 ? 100 : 70)}
+    startOffset={50}
+    reversed={false}
+    text="🎊  Happy Birthday Countdown !  🎉"
+    textProps={{
+        style: { 
+          fontSize: width > 768 ? 42 : (width > 520 ? 35 : 25), 
+            fill: '#c2afaff7' 
+        }
+    }}
+    textPathProps={null}
+    tspanProps={null}
+    ellipseProps={null}
+    svgProps={null}
+/>
             <img
-            className="2xl:w-[40%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
+            className="2xl:w-[28%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
             src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjc0b3dzNWJnMDl2c211Ymh1ejBwN2xqMXg2bnRpejA4ZnZpbmo1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Im6d35ebkCIiGzonjI/giphy.gif"
             alt="cake"
           />
           <label className="mx-10 text-2xl my-10 inputs-responsive">
-            Birthday date:
             <input
               className="ml-8 p-4 rounded-xl cursor-pointer bg-[#6a515147] shadow-[#794d4df7] shadow-md"
               type="datetime-local"
@@ -119,6 +126,9 @@ const CountdownTimer = () => {
               onClick={startTimer}>Start Timer
             </button>
           </label>
+          {showError && (
+            <p className="mb-10 p-3 rounded-2xl text-red-400 bg-[#b67c7c47] text-xl">Please select a birth date to start the timer</p>
+          )}
 
           <div className="flex gap-1 text-[#c2afaff7] inputs-responsive whitespace-nowrap">
             <div className="bg-[#18030347] px-3 py-8 rounded-3xl">
@@ -134,9 +144,6 @@ const CountdownTimer = () => {
               {timer.seconds} seconds
             </div>
           </div>
-          {showError && (
-            <p className="mt-10 p-3 rounded-2xl text-red-400 bg-[#b67c7c47] text-xl">Please select a date to start the timer</p>
-          )}
         </>
       )}
     </div>

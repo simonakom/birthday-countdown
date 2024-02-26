@@ -23,7 +23,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 1. Clone this repository to your local machine
 2. Navigate to the project directory
 3. Install tailwind
-4. Install dependencies: `npm install` `npm install react-use` `npm install react-confetti`
+4. Install dependencies: `npm install` `npm install react-use` `npm install react-confetti` `npm install react-curved-text`
 5. Once the dependencies are installed, you can start the development server and run the app:  `npm run dev`
 
 ### License
