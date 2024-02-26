@@ -1,5 +1,5 @@
 
-# <span style="margin-right: 10px;"><img src="./public/confetti.png" alt="Spotify" style="height: 2em; vertical-align: middle;"></span> Birthday Countdown
+# <span style="margin-right: 10px;"><img src="./public/confetti.png" alt="Confetti" style="height: 2em; vertical-align: middle;"></span> Birthday Countdown
 
 <div align="center">
   <img src="https://img.shields.io/badge/📖%20license-%20MIT-a964d0.svg" alt="48 items"/> 
@@ -11,7 +11,7 @@
 
 This is a Countdown React application - created using React Vite, Tailwind, Css
 
-Preview - <a href="https://simonakom.github.io/birthday-countdown/dist/index.html" style="font-size:small;">here</a>
+🔹 Preview - <a href="https://simonakom.github.io/birthday-countdown/dist/index.html" style="font-size:small;">here</a>
  
 
 ## Getting Started
