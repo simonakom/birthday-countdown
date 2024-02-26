@@ -9,7 +9,7 @@
 
 ## Welcome!
 
-This is a simple React application - created using React Vite, Tailwind, Css
+This is a Countdown React application - created using React Vite, Tailwind, Css
 
 Preview - <a href="https://simonakom.github.io/birthday-countdown/dist/index.html" style="font-size:small;">here</a>
  
