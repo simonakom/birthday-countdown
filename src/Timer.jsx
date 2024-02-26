@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Confetti from 'react-confetti'; 
 import { useWindowSize } from 'react-use'; 
+import Confetti from 'react-confetti'; 
 import ReactCurvedText from 'react-curved-text';
-
-function Video() {
-  return (
-    <div className="video">
-    <iframe 
-      width="960" 
-      height="750" 
-      src="https://www.youtube.com/embed/Jguqnlymeuk?si=W98ONFXeXBGXVLqp&autoplay=1" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-    </div>
-  );
-}
+import Video from "./components/Video"
 
 const CountdownTimer = () => {
   const { width, height } = useWindowSize(); // Get window size for confetti
@@ -63,7 +48,6 @@ const CountdownTimer = () => {
     }
   }, [targetDate]);
 
-
   const handleInputChange = (event) => { //Updates the targetDate state when the user enters a new date/time.
     setTargetDate(event.target.value);
   };
@@ -85,34 +69,34 @@ const CountdownTimer = () => {
       <>
       <Video />
       <Confetti width={width} height={height} /> 
-    </>
+      </>
       ) : (
-        <>
+      <>
       <ReactCurvedText
-    width={970}
-    height={180}
-    cx={width > 768 ? 490 : (width > 520 ? 510 : 475)}
-    cy={width > 768 ? 20 : (width > 520 ? 30 : 50)}
-    rx={width > 768 ? 310 : (width > 520 ? 280 : 200)}
-    ry={width > 768 ? 120 : (width > 520 ? 100 : 70)}
-    startOffset={50}
-    reversed={false}
-    text="🎊  Happy Birthday Countdown !  🎉"
-    textProps={{
-        style: { 
-          fontSize: width > 768 ? 42 : (width > 520 ? 35 : 25), 
-            fill: '#c2afaff7' 
-        }
-    }}
-    textPathProps={null}
-    tspanProps={null}
-    ellipseProps={null}
-    svgProps={null}
-/>
-            <img
-            className="2xl:w-[28%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
-            src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjc0b3dzNWJnMDl2c211Ymh1ejBwN2xqMXg2bnRpejA4ZnZpbmo1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Im6d35ebkCIiGzonjI/giphy.gif"
-            alt="cake"
+          width={970}
+          height={180}
+          cx={width > 768 ? 490 : (width > 520 ? 510 : 475)}
+          cy={width > 768 ? 20 : (width > 520 ? 30 : 50)}
+          rx={width > 768 ? 310 : (width > 520 ? 280 : 200)}
+          ry={width > 768 ? 120 : (width > 520 ? 100 : 70)}
+          startOffset={50}
+          reversed={false}
+          text="🎊  Happy Birthday Countdown !  🎉"
+          textProps={{
+              style: { 
+                fontSize: width > 768 ? 42 : (width > 520 ? 35 : 25), 
+                  fill: '#c2afaff7' 
+              }
+          }}
+          textPathProps={null}
+          tspanProps={null}
+          ellipseProps={null}
+          svgProps={null}
+        />
+          <img
+          className="2xl:w-[28%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjc0b3dzNWJnMDl2c211Ymh1ejBwN2xqMXg2bnRpejA4ZnZpbmo1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Im6d35ebkCIiGzonjI/giphy.gif"
+          alt="cake"
           />
           <label className="mx-10 text-2xl my-10 inputs-responsive">
             <input
