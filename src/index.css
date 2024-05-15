@@ -10,6 +10,19 @@ body {
   margin: 0;
   padding: 0; 
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 56.25%; 
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 905px) {
   .inputs-responsive {
     display: flex;
@@ -21,7 +34,14 @@ body {
     min-width: 200px;
   }
 }
-/* @keyframes slideFromRight {
+
+@media screen and (max-width: 590px) {
+	.zoom-out {
+		zoom: 0.7; 
+	}
+}
+
+@keyframes slideFromRight {
   0% {
     transform: translateX(100%);
     opacity: 0;
@@ -31,8 +51,8 @@ body {
     opacity: 1;
   }
 }
-.video {
+.video-container {
   animation: slideFromRight 1s ease forwards; 
-} */
+}
 
 

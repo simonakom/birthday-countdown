@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="p-5 mb-28 h-full flex flex-col items-center justify-center text-xl text-[#ebdddd] overflow-hidden">
+    <div className="p-5 mb-28 h-full flex flex-col items-center justify-center text-xl text-[#ebdddd] overflow-hidden zoom-out">
       {showVideo ? (
       <>
       <Video />
@@ -75,16 +75,16 @@ const CountdownTimer = () => {
       <ReactCurvedText
           width={970}
           height={180}
-          cx={width > 768 ? 490 : (width > 520 ? 510 : 475)}
-          cy={width > 768 ? 20 : (width > 520 ? 30 : 50)}
-          rx={width > 768 ? 310 : (width > 520 ? 280 : 200)}
-          ry={width > 768 ? 120 : (width > 520 ? 100 : 70)}
+          cx={width > 768 ? 500 : (width > 520 ? 490 : 485)}
+          cy={width > 768 ? 20 : (width > 520 ? 30 : -30)}
+          rx={width > 768 ? 300 : (width > 520 ? 310 : 210)}
+          ry={width > 768 ? 120 : (width > 520 ? 110 : 180)}
           startOffset={50}
           reversed={false}
           text="🎊  Happy Birthday Countdown !  🎉"
           textProps={{
               style: { 
-                fontSize: width > 768 ? 42 : (width > 520 ? 35 : 25), 
+                fontSize: width > 768 ? 42 : (width > 520 ? 42 : 35), 
                   fill: '#c2afaff7' 
               }
           }}
