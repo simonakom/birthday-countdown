@@ -4,7 +4,7 @@ import Confetti from 'react-confetti';
 import ReactCurvedText from 'react-curved-text';
 import Video from "./components/Video"
 
-const CountdownTimer = () => {
+const Timer = () => {
   const { width, height } = useWindowSize(); // Get window size for confetti
   const [targetDate, setTargetDate] = useState(""); //Holds the value of the target date/time entered by the user.
   const [showError, setShowError] = useState(false); //Manages whether to display an error message for invalid input.
@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="p-5 mb-28 h-full flex flex-col items-center justify-center text-xl text-[#ebdddd] overflow-hidden zoom-out">
+    <div className="p-2 h-full flex flex-col items-center justify-center text-xl text-[#ebdddd] overflow-hidden zoom-out">
       {showVideo ? (
       <>
       <Video />
@@ -75,16 +75,16 @@ const CountdownTimer = () => {
       <ReactCurvedText
           width={970}
           height={180}
-          cx={width > 768 ? 500 : (width > 520 ? 490 : 485)}
-          cy={width > 768 ? 20 : (width > 520 ? 30 : -30)}
-          rx={width > 768 ? 300 : (width > 520 ? 310 : 210)}
-          ry={width > 768 ? 120 : (width > 520 ? 110 : 180)}
+          cx={width > 768 ? 500 : (width > 520 ? 500 : 490)}
+          cy={width > 768 ? 0 : (width > 520 ? 5 : 10)}
+          rx={width > 768 ? 300 : (width > 520 ? 285 : 230)}
+          ry={width > 768 ? 120 : (width > 520 ? 110 : 100)}
           startOffset={50}
           reversed={false}
           text="🎊  Happy Birthday Countdown !  🎉"
           textProps={{
               style: { 
-                fontSize: width > 768 ? 42 : (width > 520 ? 42 : 35), 
+                fontSize: width > 768 ? 40 : (width > 520 ? 38 : 30), 
                   fill: '#c2afaff7' 
               }
           }}
@@ -94,7 +94,7 @@ const CountdownTimer = () => {
           svgProps={null}
         />
           <img
-          className="2xl:w-[28%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
+          className="mt-[-30px] 2xl:w-[28%] responsive-img bg-[#6a515147] shadow-[#794d4df7] shadow-md rounded-3xl"
           src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjc0b3dzNWJnMDl2c211Ymh1ejBwN2xqMXg2bnRpejA4ZnZpbmo1YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Im6d35ebkCIiGzonjI/giphy.gif"
           alt="cake"
           />
@@ -114,7 +114,7 @@ const CountdownTimer = () => {
             <p className="mb-10 p-3 rounded-2xl text-red-400 bg-[#b67c7c47] text-xl">Please select a birth date to start the timer</p>
           )}
 
-          <div className="flex gap-1 text-[#c2afaff7] inputs-responsive whitespace-nowrap">
+          <div className="flex pb-10 gap-1 text-[#c2afaff7] inputs-responsive whitespace-nowrap">
             <div className="bg-[#18030347] px-3 py-8 rounded-3xl">
               {timer.days} days
             </div>
@@ -134,4 +134,4 @@ const CountdownTimer = () => {
   );
 };
 
-export default CountdownTimer;
+export default Timer;
