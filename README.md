@@ -1,5 +1,5 @@
 
-# <span><img src="./public/confetti.png" alt="confetti" style="height: 1em;"></span> Birthday Countdown
+# <span><img src="./public/confetti.png" alt="birthday" style="height: 1em;"></span> Birthday Countdown
 
 <div>
   <img src="https://img.shields.io/badge/📖%20license-%20MIT-a964d0.svg" alt="license"/> 
