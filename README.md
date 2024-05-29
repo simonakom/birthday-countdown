@@ -1,6 +1,6 @@
 
 # <span><img src="./public/confetti.png" alt="birthday" style="height: 1em;"></span> Birthday Countdown
-test
+
 <div>
   <img src="https://img.shields.io/badge/📖%20license-%20MIT-a964d0.svg" alt="license"/> 
   <img id="last-update-badge" src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20February%2025%2C%202024-267a60.svg" alt="update" /> 
